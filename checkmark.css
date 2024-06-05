@@ -1,0 +1,57 @@
+/* MAIN */
+/* =============================================== */
+.rad-label {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #416dbd;
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+
+  background: #00aff0;
+  position: relative;
+}
+
+.rad-design::before {
+  content: "";
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+@media screen and (max-width: 1600px) {
+  .rad-label {
+    width: 40px;
+    height: 40px;
+  }
+}

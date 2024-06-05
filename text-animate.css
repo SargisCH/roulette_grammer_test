@@ -1,0 +1,27 @@
+.animate span {
+  animation-name: var(--animation);
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: var(--delay);
+  animation-iteration-count: infinite;
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: inherit;
+  }
+  50% {
+    color: #ffeb00;
+  }
+}

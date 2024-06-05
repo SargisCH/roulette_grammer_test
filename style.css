@@ -1,0 +1,367 @@
+@font-face {
+  font-family: lato-regular;
+  src: url(./assets/lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: lato-bold;
+  src: url(./assets/lato/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: lato-heavy;
+  src: url(./assets/lato/Lato-Heavy.ttf);
+}
+
+@font-face {
+  font-family: opensans-extrabold;
+  src: url(./assets/opensans/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: opensans-regular;
+  src: url(./assets/opensans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: opensans-bold;
+  src: url(./assets/opensans/OpenSans-Bold.ttf);
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: lato-regular;
+  overflow: hidden;
+}
+#reset {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+}
+.banner {
+  background-color: #00aff0;
+  display: flex;
+  height: 100%;
+}
+
+.logo-container {
+  padding-left: 9%;
+  width: 50%;
+}
+.logo {
+  margin-top: 220px;
+  width: 300px;
+}
+
+.fortuna-container {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 50%;
+  padding-right: 400px;
+  height: 100%;
+}
+.fortuna-container .desk {
+  background-image: url("./assets/desk.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 950px;
+}
+.fortuna-container .circle {
+  height: 832px;
+  position: absolute;
+  z-index: 1;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.stop {
+  animation-play-state: paused;
+}
+
+.start {
+  animation-play-state: running;
+}
+.fortuna-container .spin {
+  align-self: center;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.discount-text {
+  margin-top: 100px;
+  font-family: opensans-bold;
+}
+.discount-text > span {
+  color: white;
+  font-size: 100px;
+}
+.discount-text > .percents {
+  margin: 0;
+  color: white;
+  line-height: 0.8;
+}
+
+.discount-text > .percents > span {
+  display: inline-block;
+  font-size: 270px;
+}
+
+.game-container {
+  background-color: #00aff0;
+  position: relative;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container img {
+  position: absolute;
+  top: 220px;
+  left: 120px;
+}
+
+.form-container {
+  background-image: url("./assets/fortuna.png");
+  background-size: contain;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 120px;
+}
+
+form {
+  padding: 100px;
+  background: white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.form-column-left {
+  width: 20%;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+.form-column-right {
+  width: 830px;
+  padding-left: 20px;
+}
+
+.form-column-right p {
+  color: #416dbd;
+  font-weight: bold;
+  font-size: 44px;
+  font-family: opensans-extrabold;
+  margin: 0;
+}
+.form-row {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+form input {
+  width: 100%;
+  border: 2px solid #416dbd;
+  font-size: 28px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+form label {
+  text-align: center;
+  color: #416dbd;
+  font-size: 36px;
+  display: inline-block;
+}
+.form-column-right > label {
+  color: #416dbd;
+  font-size: 28px;
+}
+
+.form-row:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  background: #416dbd;
+  color: #ffeb00;
+  cursor: pointer;
+  font-size: 34px;
+  border: none;
+  border-radius: 10px;
+  font-family: opensans-bold;
+  font-weight: bold;
+}
+
+iframe {
+  visibility: hidden;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.agreement-text {
+  align-self: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 2200px) {
+  .game-container img {
+    top: 200px;
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .logo {
+    margin-top: 120px;
+    width: 200px;
+    height: auto;
+  }
+  .fortuna-container {
+    margin-top: 0;
+    height: 100%;
+  }
+  .fortuna-container .desk {
+    height: 680px;
+  }
+  .fortuna-container .circle {
+    height: 580px;
+  }
+  .discount-text {
+    margin-top: 15vh;
+  }
+  .discount-text > .percents > span {
+    font-size: 200px;
+  }
+  .discount-text > span {
+    font-size: 70px;
+  }
+  .form-column-right p {
+    font-size: 34px;
+  }
+  .form-container {
+    padding: 90px;
+  }
+  form {
+    width: 80%;
+  }
+  form label {
+    font-size: 28px;
+  }
+  form input {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .form-column-right > label {
+    font-size: 22px;
+  }
+  .form-row:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  form button {
+    padding: 8px 34px;
+    font-size: 36px;
+    margin-top: 10px;
+  }
+  .game-container img {
+    top: 80px;
+    width: 150px;
+    left: 100px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .discount-text {
+    margin-top: 130px;
+  }
+  .discount-text > .percents span {
+    font-size: 160px;
+  }
+  .discount-text > span {
+    font-size: 60px;
+  }
+  form label {
+    font-size: 22px;
+  }
+  form input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  .form-column-right p {
+    font-size: 32px;
+  }
+  .form-column-right > label {
+    font-size: 16px;
+  }
+  .form-row:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  form button {
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .discount-text {
+    margin-top: 80px;
+  }
+  .discount-text > .percents span {
+    font-size: 120px;
+  }
+  .discount-text > span {
+    font-size: 40px;
+  }
+  .fortuna-container .circle {
+    height: 400px;
+  }
+  .fortuna-container .desk {
+    height: 460px;
+  }
+  .fortuna-container .spin {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 2300px) {
+  .fortuna-container {
+    padding-right: 150px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./checkmark.css" />
+    <link rel="stylesheet" href="./text-animate.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="banner" id="banner">
+      <div class="column logo-container">
+        <img
+          class="logo"
+          src="./assets/logo.png"
+          width="290px"
+          height="210px"
+          alt="logo"
+        />
+        <div class="discount-text">
+          <span> CLAIM YOUR </span> <br />
+          <!-- <p id="percents" class="percents">5-95%</p> -->
+          <p id="percents" class="percents">
+            <span>5</span> <span>-</span> <span>9</span> <span>5</span>
+            <span>%</span>
+          </p>
+          <br />
+          <span>DISCOUNT</span>
+        </div>
+      </div>
+      <div class="column fortuna-container">
+        <img src="./assets/spin.png" alt="" class="spin" onclick="openGame()" />
+        <div class="desk"></div>
+        <img src="./assets/circle.png" class="circle" alt="" id="circle" />
+      </div>
+    </div>
+
+    <div class="game-container" id="game-container">
+      <iframe
+        src="http://unbecoming-authority.surge.sh"
+        name="game"
+        frameborder="0"
+      ></iframe>
+      <div class="form-container">
+        <form onsubmit="handleSubmit(event)">
+          <input type="reset" value="Reset" id="reset" />
+          <div class="form-row">
+            <div class="form-column-left"></div>
+            <div class="form-column-right">
+              <p>
+                WHERE SHOULD WE <br />
+                SEND YOUR DISCOUNT CODE?
+              </p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-left">
+              <label for="name">Name</label>
+            </div>
+            <div class="form-column-right">
+              <input type="text" id="name" name="name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-left">
+              <label for="surname">Surname</label>
+            </div>
+            <div class="form-column-right">
+              <input type="text" id="surname" name="surname" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-left">
+              <label for="email">Email</label>
+            </div>
+            <div class="form-column-right">
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-left">
+              <div class="rad-label" onclick="toggleRadioButton()">
+                <input type="radio" class="rad-input" name="rad" id="rad" />
+                <div class="rad-design"></div>
+                <span class="checkmark"></span>
+              </div>
+            </div>
+            <div class="form-column-right">
+              <label for="email-checkbox" class="agreement-text">
+                Agree to get the discount and only 1 email per month</label
+              >
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-column-left">
+              <button>SPIN</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
